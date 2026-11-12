@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="my">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090f20">
+<title>PETER GAME SHOP | MLBB Diamond Top-Up</title>
+<style>
+:root{--bg:#080e1d;--card:#111d34;--line:#293c60;--muted:#9eacc7;--blue:#557dff;--cyan:#38d9d0;--white:#f5f7ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% -10%,#203d70 0,transparent 43%),var(--bg);color:var(--white);font-family:system-ui,"Noto Sans Myanmar",sans-serif}
+.wrap{max-width:980px;margin:auto;padding:20px}.header{display:flex;justify-content:space-between;align-items:center;padding:10px 0 22px}.brand{font-weight:950;font-size:22px;letter-spacing:.4px}.brand span{color:var(--cyan)}.sub{font-size:11px;color:var(--muted);letter-spacing:1.5px}.pill{border:1px solid #34517b;background:#152746;padding:8px 12px;border-radius:30px;font-size:12px;color:#d9e8ff}
+.hero{padding:25px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(120deg,#1b3158,#111b31);margin-bottom:17px}.hero h1{font-size:clamp(26px,5vw,40px);margin:0 0 8px}.hero p{color:#b9c6dc;margin:0;line-height:1.7}.layout{display:grid;grid-template-columns:1.1fr .9fr;gap:17px}.card{background:rgba(17,29,52,.97);border:1px solid var(--line);border-radius:18px;padding:19px;margin-bottom:17px}.card h2{font-size:17px;margin:0 0 14px}.step{color:var(--cyan);margin-right:7px}label{display:block;color:var(--muted);font-size:13px;margin:12px 0 7px}.row{display:grid;grid-template-columns:1fr 1fr;gap:11px}input{width:100%;padding:13px;border:1px solid var(--line);border-radius:11px;background:#0a1428;color:white;font-size:15px;outline:none}input:focus{border-color:var(--cyan)}button{font:inherit;cursor:pointer}.btn{width:100%;border:0;border-radius:11px;padding:13px 15px;margin-top:12px;background:linear-gradient(90deg,var(--blue),#7767f5);color:white;font-weight:800}.btn.alt{background:#233858;border:1px solid #385078}.btn:disabled{opacity:.6;cursor:wait}.status{border:1px solid var(--line);background:#0a1428;border-radius:11px;padding:12px;margin-top:12px;color:#c4d0e5;font-size:13px;line-height:1.65;overflow-wrap:anywhere}.status.good{border-color:#247b68;color:#9ff1d0}.status.bad{border-color:#87504a;color:#ffc0b4}.packages{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.pkg{background:#0c172c;color:white;text-align:left;border:1px solid var(--line);border-radius:12px;padding:13px}.pkg b{display:block;font-size:15px}.pkg small{color:var(--muted);display:block;margin-top:4px}.pkg.active{border-color:var(--cyan);background:#12313a}.methods{display:flex;gap:8px;flex-wrap:wrap}.method{padding:8px 12px;background:#203657;border-radius:30px;font-size:13px}.hint{font-size:12px;color:var(--muted);line-height:1.7}.summary{display:grid;gap:8px}.sumline{display:flex;justify-content:space-between;gap:12px;font-size:13px;color:#c4d0e5}.sumline strong{color:white;text-align:right}.footer{text-align:center;color:var(--muted);font-size:12px;padding:14px}.telegram{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;text-align:center;width:100%;padding:13px;border-radius:11px;background:#168bd0;color:white;font-weight:800;margin-top:12px}.hidden{display:none!important}
+@media(max-width:720px){.wrap{padding:14px}.layout{grid-template-columns:1fr}.row{grid-template-columns:1fr}.hero{padding:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="header"><div><div class="brand">PETER <span>GAME SHOP</span></div><div class="sub">MOBILE LEGENDS • DIAMOND TOP-UP</div></div><div class="pill">CUSTOMER PORTAL</div></header>
+<section class="hero"><h1>MLBB Diamond Top-Up</h1><p>Player ID နဲ့ Server ID ထည့်ပြီး In-Game Name ကို စစ်ဆေးပါ။ အမည်မှန်ကြောင်း အတည်ပြုပြီးမှ Package ရွေးကာ Order ပို့နိုင်ပါတယ်။</p></section>
+<div class="layout">
+<main>
+<section class="card"><h2><span class="step">01</span>Player Verification</h2>
+<div class="row"><div><label for="playerId">Player ID</label><input id="playerId" inputmode="numeric" autocomplete="off" placeholder="Player ID"></div><div><label for="serverId">Server ID</label><input id="serverId" inputmode="numeric" autocomplete="off" placeholder="Server ID"></div></div>
+<button class="btn alt" id="verifyBtn">CHECK IN-GAME NAME</button>
+<div id="verifyResult" class="status">Player ID / Server ID ထည့်ပြီး Check ကိုနှိပ်ပါ။</div>
+</section>
+<section class="card"><h2><span class="step">02</span>Select Diamond Package</h2>
+<div class="packages" id="packages">
+<button class="pkg active" data-name="86 Diamonds"><b>💎 86 Diamonds</b><small>ဈေးနှုန်း ဆိုင်မှသတ်မှတ်ရန်</small></button>
+<button class="pkg" data-name="172 Diamonds"><b>💎 172 Diamonds</b><small>ဈေးနှုန်း ဆိုင်မှသတ်မှတ်ရန်</small></button>
+<button class="pkg" data-name="257 Diamonds"><b>💎 257 Diamonds</b><small>ဈေးနှုန်း ဆိုင်မှသတ်မှတ်ရန်</small></button>
+<button class="pkg" data-name="344 Diamonds"><b>💎 344 Diamonds</b><small>ဈေးနှုန်း ဆိုင်မှသတ်မှတ်ရန်</small></button>
+<button class="pkg" data-name="514 Diamonds"><b>💎 514 Diamonds</b><small>ဈေးနှုန်း ဆိုင်မှသတ်မှတ်ရန်</small></button>
+<button class="pkg" data-name="706 Diamonds"><b>💎 706 Diamonds</b><small>ဈေးနှုန်း ဆိုင်မှသတ်မှတ်ရန်</small></button>
+</div></section>
+</main>
+<aside>
+<section class="card"><h2><span class="step">03</span>Payment Method</h2><div class="methods"><span class="method">KBZPay</span><span class="method">WavePay</span></div>
+<p class="hint">ဆိုင်ပိုင်ရှင်၏ ငွေလက်ခံအကောင့်အမည်၊ ဖုန်းနံပါတ်နှင့် QR ကို Admin က ထည့်သွင်းရန်လိုသည်။ Payment အချက်အလက် မသတ်မှတ်ရသေးပါ။</p>
+<label for="receipt">Payment Screenshot</label><input id="receipt" type="file" accept="image/*">
+</section>
+<section class="card"><h2><span class="step">04</span>Order Summary</h2><div class="summary status"><div class="sumline"><span>In-Game Name</span><strong id="sumName">Not verified</strong></div><div class="sumline"><span>Player ID</span><strong id="sumId">—</strong></div><div class="sumline"><span>Server ID</span><strong id="sumServer">—</strong></div><div class="sumline"><span>Package</span><strong id="sumPack">86 Diamonds</strong></div></div>
+<a class="telegram" id="telegramOrder" href="https://t.me/share/url?url=&text=Hello%20PETER%20GAME%20SHOP" target="_blank" rel="noopener">✈ ORDER VIA TELEGRAM</a>
+<p class="hint">Telegram မှာ Order အသေးစိတ်ကို ဆိုင်ထံပို့နိုင်ရန် Share ဖွင့်ပေးပါမည်။ ဆိုင်၏ Telegram username မထည့်ရသေးပါ။</p>
+</section>
+<section class="card"><h2>Order Status</h2><label for="orderId">Order Number</label><input id="orderId" placeholder="Order number"><button class="btn alt" id="trackBtn">CHECK ORDER</button><div class="status" id="trackResult">Order tracking အတွက် server backend လိုအပ်ပါသည်။</div></section>
+</aside></div>
+<footer class="footer">© PETER GAME SHOP · MLBB TOP-UP</footer>
+</div>
+<script>
+let selectedPackage='86 Diamonds', verifiedName='';
+const $=id=>document.getElementById(id);
+document.querySelectorAll('.pkg').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.pkg').forEach(x=>x.classList.remove('active'));btn.classList.add('active');selectedPackage=btn.dataset.name;$('sumPack').textContent=selectedPackage;updateTelegram()}));
+function updateTelegram(){const pid=$('playerId').value.trim(),sid=$('serverId').value.trim(),receipt=$('receipt').files[0]?.name||'Not attached';const msg=`Hello PETER GAME SHOP%0APlayer ID: ${encodeURIComponent(pid)}%0AServer ID: ${encodeURIComponent(sid)}%0AIGN: ${encodeURIComponent(verifiedName||'Not verified')}%0APackage: ${encodeURIComponent(selectedPackage)}%0APayment screenshot: ${encodeURIComponent(receipt)}`;$('telegramOrder').href='https://t.me/share/url?url=&text='+msg}
+$('verifyBtn').addEventListener('click',async()=>{const pid=$('playerId').value.trim(),sid=$('serverId').value.trim(),out=$('verifyResult');verifiedName='';$('sumName').textContent='Not verified';$('sumId').textContent=pid||'—';$('sumServer').textContent=sid||'—';if(!/^\\d+$/.test(pid)||!/^\\d+$/.test(sid)){out.className='status bad';out.textContent='Player ID နဲ့ Server ID ကို ဂဏန်းဖြင့် မှန်ကန်စွာ ဖြည့်ပါ။';updateTelegram();return}
+const btn=$('verifyBtn');btn.disabled=true;btn.textContent='CHECKING…';out.className='status';out.textContent='Player အချက်အလက် စစ်ဆေးနေပါသည်…';
+try{const r=await fetch('/api/lookup',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({playerId:pid,serverId:sid})});const data=await r.json();if(!r.ok||!data.nickname)throw new Error(data.error||'Nickname ကို အတည်မပြုနိုင်ပါ');verifiedName=data.nickname;$('sumName').textContent=verifiedName;out.className='status good';out.textContent='✓ In-Game Name: '+verifiedName+' — မှန်ကန်ကြောင်း API မှ အတည်ပြုပြီးပါပြီ။'}catch(e){out.className='status bad';out.textContent='အတည်ပြုမရပါ။ '+e.message+' ။ Supplier API ချိတ်ဆက်ထားခြင်း ရှိ/မရှိ စစ်ပါ။'}finally{btn.disabled=false;btn.textContent='CHECK IN-GAME NAME';updateTelegram()}});
+['playerId','serverId','receipt'].forEach(id=>$(id).addEventListener('input',updateTelegram));
+$('trackBtn').addEventListener('click',()=>$('trackResult').textContent='Tracking API မချိတ်ဆက်ရသေးပါ။ Order Number: '+$('orderId').value.trim());
+updateTelegram();
+</script>
+</body></html>
